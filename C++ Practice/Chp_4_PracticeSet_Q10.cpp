@@ -1,22 +1,23 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int Number, Prime = 1;
+    int num;
+    bool prime = true;
 
-    cout<<"Enter the number to identify whether it is prime or not: "<<endl;
-    cin>>Number;
+    cout<<"Enter the num to identify whether it is prime or not: "<<endl;
+    cin>>num;
 
-    for(int i = 2; i<Number ; i++ ){
-        if(Number%i==0){
-            Prime=0;
+    for(int i = 2; i < num ; i++ ){
+        if(num%i==0){
+            prime=false;
             break;
         }
     }
-    if(Prime==0 && Number!=2){
-        cout<<Number<<" IS NOT a prime number"<<endl;
+    if(!prime || num < 2){
+        cout<<num<<" IS NOT a prime num"<<endl;
     }
     else{
-        cout<<Number<<" IS a prime number"<<endl;;
+        cout<<num<<" IS a prime num"<<endl;;
     }
 
     return 0;
